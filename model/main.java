@@ -4,22 +4,28 @@ import java.io.Serializable;
 
 public class main implements Serializable {
 
-    private String name;
-    private String password;
+    private static final Map<String, String> users = new HashMap<>();
 
-    public void User() {}
-
-    public void User(String name,String password) {
-        this.name = name;
-        this.password = password;
+    static {
+        // 初期ユーザーデータの設定（実際はデータベースから読み込むなど）
+        users.put("user1", "password1");
+        users.put("user2", "password2");
     }
 
-    public String getName(){     // 1. ユーザー名取得
-        return this.name;
+    public static boolean authenticateUser(String username, String password) {
+        // ユーザーの認証を行う
+        String storedPassword = users.get(username);
+        return storedPassword != null && storedPassword.equals(password);
     }
 
-    public String getPassword(){   // 2. パスワード取得
-        return this.password;
+    public static void registerUser(String username, String password) {
+        // ユーザーの新規登録
+        users.put(username, password);
+    }
+
+    public static void resetPassword(String username, String newPassword) {
+        // パスワードリセット
+        users.put(username, newPassword);
     }
 }
 
