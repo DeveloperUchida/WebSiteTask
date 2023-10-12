@@ -5,6 +5,10 @@ body{
 .Heder{
     text-align: center;
 }
+.time{
+    text-align: right;
+    font-size: 15px;
+}
 .Copy{
     text-align: right;
     margin-top: 350px;
