@@ -1,8 +1,9 @@
 @charset "UTF-8";
 body{
-    background-color: aquamarine;
+    background-color: black;
 }
 .Heder{
+    color: red;
     text-align: center;
 }
 .time{
@@ -14,10 +15,11 @@ body{
     margin-top: 350px;
 }
 .text1{
-    text-align: right;
-    color: cornflowerblue;
+    text-align: center;
+    color: red;
+    margin-top: 200px;
 }
 .Copy{
-
+color: red;
 font-size: 10px;
 }
